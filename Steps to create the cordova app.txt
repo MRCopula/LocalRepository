@@ -3,6 +3,8 @@ https://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html
 prerequisites:
 Node.js for Command line Interface
 Gradel for build automation
+github
+Ant
 
 Steps:
 1) Cordova -d create D:\Workspace\ProjectName AppId(optional) "DisplayName".
