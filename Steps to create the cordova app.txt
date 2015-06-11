@@ -10,8 +10,8 @@ Steps to create cordova project using the Command Line Interface (CLI) i.e using
 
 ***For creating the project :
 
-1) Cordova -d create D:\Workspace\ProjectName AppId(optional) "DisplayName".
- 
+1) Cordova -d create D:\Workspace\ProjectName AppId "DisplayName".
+
 2) Move to the Directory of the project for adding the platform and plugins
 
 ***For platform(The platform specifies the device for which the application is to be build like Andorid/iOS/Windows) :
