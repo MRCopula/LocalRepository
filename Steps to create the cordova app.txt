@@ -1,3 +1,158 @@
+05/August/2015(Latest)
+
+PRE INSTALLATION :
+Gradel :
+(For the Automation or the build also.
+GRADLE_HOME variable path should be set upto bin into system variable and refference should be used using the %GRADLE_HOME% in User variable)
+Nodejs:
+(Since the Plugin addition to the project can be done using the CLI only)
+Apache ANT:
+(ANT_HOME variable path should be set upto bin into system variable and refference should be used using the %ANT_HOME% in User variable )
+Cordova latest :
+(Installed using the npm -g install cordova)
+
+Set the Path of the Kapsel Plugins into the Path variable of the system using the variable name as 
+
+=============================================================================================================================
+KAPSEL_HOME : C:\SAP\MobileSDK3\KapselSDK\plugins
+=============================================================================================================================
+
+STEPS TO CREATE KAPSEL CORDOVA PROJECT CREATION USING "ANDROID" AS A PLATFORM 
+
+STEP ONE :
+// Always try to use -d with the corodva command to see the actual data log
+(-v, --version ...................... prints out this utility's version
+ -d, --verbose ...................... debug mode produces verbose log output all activity,including output of sub-commands cordova invokes)
+
+// Do not include quotes except for the last parameterer the display name. 
+// The parameters in Cordova "CREATE" are positional so either use one of the format available below
+
+This will take the "Hello World" as the project name on import into workspace .
+C:\Administrator>Cordova -d Create "Full path of the project" 
+		
+			OR
+
+C:\Administrator>Cordova -d Create "Full path of the project" "AppID" "Display Name"
+
+EXAMPLE :C:\Administration>Cordova -d Create C:\Kapsel_Workspace\Demo09
+
+STEP TWO :
+Change the current working directory upto projectpath of cordova based project
+
+
+EXAMPLE
+C:\Administration>Cd C:\Kapsel_Workspace\Demo09
+
+The command prompt will have the new command line as 
+
+C:\Kapsel_Workspace\Demo09
+
+STEP THREE:
+Adding the Platform as ANDROID/IOS
+
+C:\WorkSpace\ProjectName>cordova -d platform add android
+
+EXAMPLE :
+C:\Kapsel_Workspace\Demo09>cordova -d platform add android
+
+STEP FOUR:
+Adding  plugins of SAP Kapsel or third party plugins of Cordova
+
+Updated way to add plugins into Kapsel COrdova Project 
+
+C:\WorkSpace\ProjectName>cordova plugin add kapsel-plugin-name --searchpath %KAPSEL_HOME%/plugins
+
+EXAMPLE :
+C:\Kapsel_Workspace\Demo09>cordova plugin add kapsel-plugin-logon --searchpath %KAPSEL_HOME%/plugins
+
+STEP FIVE :
+Plugin sequence of Kapsel cordova. 
+
+Add pugins as per suggested format in STEP FOUR . 
+
+ONE : LOGON
+C:\Kapsel_Workspace\Demo09>cordova plugin add kapsel-plugin-name --searchpath %KAPSEL_HOME%/plugins
+(		The Logon plugin will install 3 plugins with it
+		1 CoreLibs
+		2 AuthProxy
+		3 Logon 
+		4 Inappbrowser
+)
+
+TWO : LOGGER 
+C:\Kapsel_Workspace\Demo09>cordova plugin add kapsel-plugin-logger --searchpath %KAPSEL_HOME%/plugins
+
+THREE : i18n 
+C:\Kapsel_Workspace\Demo09>cordova plugin add kapsel-plugin-i18n --searchpath %KAPSEL_HOME%/plugins
+
+FOUR : APPUPDATE
+C:\Kapsel_Workspace\Demo09>cordova plugin add kapsel-plugin-appupdate --searchpath %KAPSEL_HOME%/plugins
+
+FIVE : SETTINGS
+C:\Kapsel_Workspace\Demo09>cordova plugin add kapsel-plugin-settings --searchpath %KAPSEL_HOME%/plugins
+
+SIX : PUSH
+C:\Kapsel_Workspace\Demo09>cordova plugin add kapsel-plugin-push--searchpath %KAPSEL_HOME%/plugins
+
+For Android, you must install the Google Play services SDK found in the Android SDK Manager under Extras.
+
+SEVEN : ENCRYPTED STORAGE
+C:\Kapsel_Workspace\Demo09>cordova plugin add kapsel-plugin-encryptedstorage --searchpath %KAPSEL_HOME%/plugins
+
+============================================================================================================================
+
+CoreLibs:
+C:\SAP\MobileSDK3\KapselSDK\plugins\corelibs
+
+inAppBrowser
+C:\SAP\MobileSDK3\KapselSDK\plugins\inappbrowser
+
+AuthProxy:
+C:\SAP\MobileSDK3\KapselSDK\plugins\authproxy
+
+Logon :
+C:\SAP\MobileSDK3\KapselSDK\plugins\logon
+
+Logger:
+C:\SAP\MobileSDK3\KapselSDK\plugins\logger
+
+
+i18n
+C:\SAP\MobileSDK3\KapselSDK\plugins\i18n
+
+
+App Update :
+C:\SAP\MobileSDK3\KapselSDK\plugins\appupdate
+
+
+Setting :
+C:\SAP\MobileSDK3\KapselSDK\plugins\settings
+
+
+Push:
+C:\SAP\MobileSDK3\KapselSDK\plugins\push
+
+
+Writing out cordova_plugins.js
+Install complete for Kapsel-plugins-push on android.
+Updating the build files since Android plugin contained(Framework)
+For Android ,you muct install the google play services SDK found in the Android SDK Manager under Extras.
+
+
+
+EncryptedStorage:
+C:\SAP\MobileSDK3\KapselSDK\plugins\encryptedstorage
+
+
+  On Android, for AppUpdate to work correctly, you need to modify
+  the main class of your app.  The main class is found here:
+  src/your_package/app_name.java.
+
+  Find the line that ends with "extends CordovaActivity" and
+  change it to "extends KapselActivity".
+
+=============================================================================================================================
+
 https://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html
 
 Prerequisites:
