@@ -132,17 +132,13 @@ C:\SAP\MobileSDK3\KapselSDK\plugins\settings
 Push:
 C:\SAP\MobileSDK3\KapselSDK\plugins\push
 
-
 Writing out cordova_plugins.js
 Install complete for Kapsel-plugins-push on android.
 Updating the build files since Android plugin contained(Framework)
 For Android ,you muct install the google play services SDK found in the Android SDK Manager under Extras.
 
-
-
 EncryptedStorage:
 C:\SAP\MobileSDK3\KapselSDK\plugins\encryptedstorage
-
 
   On Android, for AppUpdate to work correctly, you need to modify
   the main class of your app.  The main class is found here:
@@ -150,9 +146,7 @@ C:\SAP\MobileSDK3\KapselSDK\plugins\encryptedstorage
 
   Find the line that ends with "extends CordovaActivity" and
   change it to "extends KapselActivity".
-
 =============================================================================================================================
-
 https://cordova.apache.org/docs/en/4.0.0/guide_cli_index.md.html
 
 Prerequisites:
