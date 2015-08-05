@@ -29,9 +29,7 @@ STEP ONE :
 
 This will take the "Hello World" as the project name on import into workspace .
 C:\Administrator>Cordova -d Create "Full path of the project" 
-		
 			OR
-
 C:\Administrator>Cordova -d Create "Full path of the project" "AppID" "Display Name"
 
 EXAMPLE :C:\Administration>Cordova -d Create C:\Kapsel_Workspace\Demo09
@@ -60,6 +58,7 @@ Adding  plugins of SAP Kapsel or third party plugins of Cordova
 
 Updated way to add plugins into Kapsel COrdova Project 
 
+C:\WorkSpace\ProjectName>cordova plugin add %KAPSEL_HOME%/plugins/logon --searchpath %KAPSEL_HOME%/plugins
 C:\WorkSpace\ProjectName>cordova plugin add kapsel-plugin-name --searchpath %KAPSEL_HOME%/plugins
 
 EXAMPLE :
